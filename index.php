@@ -58,7 +58,8 @@
 
         <div>
           <div class="list-group">
-            <?php foreach ($posts as $post) :
+            <?php 
+            foreach ($posts as $post) :
               $data = date_create($post['data_postagem']);
               $data = date_format($data, 'd/m/Y H:i:s');
             ?>
@@ -76,7 +77,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <!-- Rodapé -->
+        <!-- Rodapé //-->
         <?php include 'include/rodape.php'; ?>
       </div>
     </div>

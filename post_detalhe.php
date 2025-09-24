@@ -6,7 +6,7 @@ require_once 'core/sql.php';
 require_once 'core/mysql.php';
 
 foreach($_GET as $indice => $dado){
-    $indice = limparDados($dado);
+    $$indice = limparDados($dado);
 }
 
 $posts = buscar(
@@ -20,7 +20,7 @@ $posts = buscar(
          where usuario.id = post.usuario_id) as nome'
     ],
     [
-        'id', '=', $post
+        ['id', '=', $post]
     ]
 );
 $post = $posts[0];

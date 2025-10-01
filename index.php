@@ -38,7 +38,8 @@
         $criterio = [['data_postagem', '<=', $data_atual]];
 
         if (!empty($busca)) {
-          $criterio[] = ['AND', 'texto', 'like', "%{$busca}%"];
+          $criterio[] = ['AND', 'titulo', 'like', "%{$busca}%"];
+          $criterio[] = ['OR', 'texto', 'like', "%{$busca}%"];
         }
 
         $posts = buscar(

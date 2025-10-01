@@ -130,6 +130,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
     }
 
     $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
+    //echo $instrucao;
     $conexao = conecta();
     $stmt = mysqli_prepare($conexao, $instrucao);
 
